@@ -1,0 +1,176 @@
+name: shangrila
+description: "ShangriLa Group Application."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter_localizations:
+    sdk: flutter
+  flutter:
+    sdk: flutter
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.8
+  intl: ^0.20.2
+  http: ^1.5.0
+  mockito: ^5.5.1
+  json_annotation: ^4.9.0
+  english_words: ^4.0.0
+  dio: ^5.9.0
+  table_calendar: ^3.2.0
+  flutter_calendar_carousel: ^2.5.4
+  # charts_flutter_new_plus: ^0.0.4
+  syncfusion_flutter_datepicker: ^31.1.21
+  syncfusion_flutter_calendar: ^31.1.21
+  syncfusion_flutter_charts: ^31.1.21
+  pdf: ^3.11.3
+  path_provider: ^2.1.5
+  time_range: ^1.1.1
+  image_picker: ^1.2.0
+  date_time_picker_plus: ^1.0.2
+  flutter_datetime_picker_plus: ^2.2.0
+  package_info_plus: ^9.0.0
+  shared_preferences: ^2.5.3
+  flutter_html: ^3.0.0
+  url_launcher: ^6.3.2
+  qr_code_scanner_plus: ^2.0.12
+  flutter_screenutil: ^5.9.3
+  firebase_core: ^4.1.1
+  firebase_database: ^12.0.2
+  firebase_messaging: ^16.0.2
+  flutter_local_notifications: ^19.4.2
+  # notification_permissions: ^0.6.1
+  number_inc_dec: ^0.8.0
+  google_maps_flutter: ^2.13.1
+  location: ^8.0.1
+  qr_flutter: ^4.1.0
+  carousel_slider: ^5.1.1
+  geolocator: ^14.0.1
+  chewie: ^1.13.0
+  video_thumbnail: ^0.5.6
+  external_path: ^2.2.0
+  file_picker: ^10.3.3
+  fluttertoast: ^9.0.0
+  flutter_dialogs: ^3.0.0
+
+  flutter_downloader: ^1.12.0
+# gallery_saver_plus: ^3.2.9
+  app_badge_plus: ^1.2.3
+  
+  square_in_app_payments: ^1.7.11
+  uuid: ^4.5.1
+  webview_flutter: ^4.13.0
+# linkify_plus: ^6.0.3
+  flutter_linkify: ^6.0.0
+  maps_launcher: ^3.0.0+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^5.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  assets:
+
+    - images/login_back.jpg
+
+    - images/no_image.jpg
+
+    - images/logo.png
+    - images/card_back.png
+    - images/card_back_gold.png
+    - images/home_body_back.jpg
+
+    - images/cart_back.jpg
+    - images/qr_logo.png
+    - images/icon/icon_diamond.png
+    - images/icon/icon_person.png
+
+    - images/footer_back.png
+    - images/icon/icon_home.png
+    - images/icon/icon_back.png
+    - images/icon/icon_forward.png
+    - images/icon/icon_setting.png
+    - images/icon/icon_logout.png
+    - images/icon/icon_footer_cart.png
+    - images/icon/person.png
+
+    - images/pattern/border_dotted.png
+    - images/pattern/line_slash.png
+    - images/pattern/card_right_bargroup.png
+
+    - images/icon/icon_calancer.png
+    - images/icon/icon_checkin.png
+    - images/icon/icon_messeage.png
+    - images/icon/icon_brush.png
+    - images/icon/icon_cart.png
+    - images/icon/icon_card.png
+    - images/icon/icon_history.png
+    - images/icon/icon_organlist.png
+    - images/icon/icon_advise.png
+    - images/icon/icon_sale.png
+    - images/icon/icon_blog.png
+
+    - images/organ_back.jpg
+    - images/organ_floor_match.png
+    - images/organ_map_bar.jpg
+    - images/happy_back.png
+
+  fonts:
+    - family: Bauhaus93
+      fonts:
+        - asset: fonts/Bauhs93.ttf
+        - asset: fonts/Bauhaus-93-Regular.ttf
+ 
+    - family: Amazon
+      fonts:
+        - asset: fonts/amazone_bt.ttf
+    
+    - family: Hiragino
+      fonts:
+        - asset: fonts/Hiragino-Sans-GB-W6.ttf
+
+    - family: KozGoPr6
+      fonts:
+        - asset: fonts/KozGoPr6NRegular.ttf
