@@ -95,7 +95,7 @@ class _ConnectReserveOrgan extends State<ConnectReserveOrgan> {
         color: Colors.grey,
         image: imageUrl == null
             ? DecorationImage(
-                image: AssetImage('images/no_image.jpg'), fit: BoxFit.cover)
+                image: AssetImage('images/noimage.jpg'), fit: BoxFit.cover)
             : DecorationImage(
                 image: NetworkImage(organImageUrl + imageUrl),
                 fit: BoxFit.cover),

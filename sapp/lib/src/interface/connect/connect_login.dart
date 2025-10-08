@@ -148,7 +148,7 @@ class _ConnectLogin extends State<ConnectLogin> {
           ),
           decoration: BoxDecoration(
               image: DecorationImage(
-            image: AssetImage('images/login_back.jpg'),
+            image: AssetImage('images/loginback.jpg'),
             fit: BoxFit.cover,
           )),
         ));

@@ -112,21 +112,16 @@ flutter:
   uses-material-design: true
 
   assets:
-
-    - images/login_back.jpg
-
-    - images/no_image.jpg
-
+    - images/loginback.jpg
+    - images/noimage.jpg
     - images/logo.png
     - images/card_back.png
     - images/card_back_gold.png
     - images/home_body_back.jpg
-
     - images/cart_back.jpg
     - images/qr_logo.png
     - images/icon/icon_diamond.png
     - images/icon/icon_person.png
-
     - images/footer_back.png
     - images/icon/icon_home.png
     - images/icon/icon_back.png
@@ -135,11 +130,9 @@ flutter:
     - images/icon/icon_logout.png
     - images/icon/icon_footer_cart.png
     - images/icon/person.png
-
     - images/pattern/border_dotted.png
     - images/pattern/line_slash.png
     - images/pattern/card_right_bargroup.png
-
     - images/icon/icon_calancer.png
     - images/icon/icon_checkin.png
     - images/icon/icon_messeage.png
@@ -151,7 +144,6 @@ flutter:
     - images/icon/icon_advise.png
     - images/icon/icon_sale.png
     - images/icon/icon_blog.png
-
     - images/organ_back.jpg
     - images/organ_floor_match.png
     - images/organ_map_bar.jpg

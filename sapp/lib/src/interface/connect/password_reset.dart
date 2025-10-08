@@ -71,6 +71,10 @@ class _PasswordReset extends State<PasswordReset> {
     return WillPopScope(
         onWillPop: () async => true,
         child: Container(
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage('images/loginback.jpg'),
+                  fit: BoxFit.cover)),
           child: Scaffold(
             backgroundColor: Colors.transparent,
             body: FutureBuilder<List>(
@@ -89,10 +93,6 @@ class _PasswordReset extends State<PasswordReset> {
               },
             ),
           ),
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage('images/login_back.jpg'),
-                  fit: BoxFit.cover)),
         ));
   }
 

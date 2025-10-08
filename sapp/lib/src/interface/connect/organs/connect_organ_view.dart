@@ -154,7 +154,7 @@ class _ConnectOrganView extends State<ConnectOrganView> {
       width: 140,
       height: 90,
       child: organ!.organImage == null || organ!.organImage!.isEmpty
-          ? Image.network(organImageUrl + 'no_image.jpg')
+          ? Image.network('${organImageUrl}noimage.jpg')
           : Image.network(organImageUrl + organ!.organImage!),
     );
   }

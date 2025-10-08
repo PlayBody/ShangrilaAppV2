@@ -223,6 +223,11 @@ class _ConnectRegister extends State<ConnectRegister> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+          image: DecorationImage(
+        image: AssetImage('images/loginback.jpg'),
+        fit: BoxFit.cover,
+      )),
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: FutureBuilder<List>(
@@ -244,11 +249,6 @@ class _ConnectRegister extends State<ConnectRegister> {
           },
         ),
       ),
-      decoration: BoxDecoration(
-          image: DecorationImage(
-        image: AssetImage('images/login_back.jpg'),
-        fit: BoxFit.cover,
-      )),
     );
   }
 
