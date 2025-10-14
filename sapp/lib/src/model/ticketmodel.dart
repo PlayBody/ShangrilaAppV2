@@ -33,16 +33,16 @@ class TicketModel {
     TicketModel tmp = TicketModel(
       id: json['id'],
       ticketId: json['ticket_id'],
-      title: json['ticket_title'] == null ? '' : json['ticket_title'],
-      price: json['ticket_price'] == null ? '0' : json['ticket_price'],
+      title: json['ticket_title'] ?? '',
+      price: json['ticket_price'] ?? '0',
       image: json['ticket_image'],
-      price02: json['ticket_price02'] == null ? '0' : json['ticket_price02'],
-      detail: json['ticket_detail'] == null ? '' : json['ticket_detail'],
-      cost: json['ticket_cost'] == null ? '' : json['ticket_cost'],
-      tax: json['ticket_tax'] == null ? '' : json['ticket_tax'],
-      cnt: json['ticket_count'] == null ? '1' : json['ticket_count'],
+      price02: json['ticket_price02'] ?? '0',
+      detail: json['ticket_detail'] ?? '',
+      cost: json['ticket_cost'] ?? '',
+      tax: json['ticket_tax'] ?? '',
+      cnt: json['ticket_count'] ?? '1',
       disamount:
-          json['ticket_disamount'] == null ? '0' : json['ticket_disamount'],
+          json['ticket_disamount'] ?? '0',
       userCnt: json['count'] == null ? 0 : int.parse(json['count']),
     );
     tmp.cartCount = 1;

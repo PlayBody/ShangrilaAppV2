@@ -17,7 +17,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class ConnectRegister extends StatefulWidget {
   final bool? isProfile;
-  const ConnectRegister({this.isProfile, Key? key}) : super(key: key);
+  const ConnectRegister({this.isProfile, super.key});
 
   @override
   _ConnectRegister createState() => _ConnectRegister();
@@ -93,7 +93,7 @@ class _ConnectRegister extends State<ConnectRegister> {
 
   Future<void> saveUserInfo() async {
     String strSex = _groupValue.toString();
-    String strBirthDay = selectYear + "-" + (int.parse(selectMonth)<10 ? '0' : '') + selectMonth + "-" + (int.parse(selectDay)<10 ? '0' : '')+selectDay;
+    String strBirthDay = "$selectYear-${int.parse(selectMonth)<10 ? '0' : ''}$selectMonth-${int.parse(selectDay)<10 ? '0' : ''}$selectDay";
 
     if (!isFormCheck()) return;
 
@@ -137,15 +137,16 @@ class _ConnectRegister extends State<ConnectRegister> {
     bool conf = await Dialogs().confirmDialog(context, qCommonDelete);
     if (!conf) return;
     bool isDelete = await ClUser().deleteUser(context, globals.userId);
-    if (isDelete)
+    if (isDelete) {
       Navigator.push(context, MaterialPageRoute(builder: (_) {
         return ConnectLogin();
       }));
+    }
   }
 
   Future<void> updateUserInfo() async {
     String strSex = _groupValue.toString();
-    String strBirthDay = selectYear + "-" + (int.parse(selectMonth)<10 ? '0' : '') + selectMonth + "-" + (int.parse(selectDay)<10 ? '0' : '')+selectDay;
+    String strBirthDay = "$selectYear-${int.parse(selectMonth)<10 ? '0' : ''}$selectMonth-${int.parse(selectDay)<10 ? '0' : ''}$selectDay";
 
     if (!isFormCheck()) return;
 
@@ -225,7 +226,7 @@ class _ConnectRegister extends State<ConnectRegister> {
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-        image: AssetImage('images/loginback.jpg'),
+        image: AssetImage('images/login_back.jpg'),
         fit: BoxFit.cover,
       )),
       child: Scaffold(
@@ -260,9 +261,9 @@ class _ConnectRegister extends State<ConnectRegister> {
     return [
       Container(
           padding: EdgeInsets.only(top: 10, right: 10),
+          alignment: Alignment.topRight,
           child:
-              Text('', style: TextStyle(fontSize: 10, color: Colors.black45)),
-          alignment: Alignment.topRight),
+              Text('', style: TextStyle(fontSize: 10, color: Colors.black45))),
       _getShopTitle(),
       // _getContentTitle('氏名'),
       // _getNameInput(),
@@ -307,11 +308,11 @@ class _ConnectRegister extends State<ConnectRegister> {
     );
   }
 
-  Widget _getContentTitle(_title) {
+  Widget _getContentTitle(title) {
     return Container(
       padding: EdgeInsets.only(left: 8, bottom: 4),
       alignment: Alignment.centerLeft,
-      child: InputLabel(label: _title),
+      child: InputLabel(label: title),
     );
   }
 
@@ -401,7 +402,7 @@ class _ConnectRegister extends State<ConnectRegister> {
       children: <Widget>[
         InputLabel(label: '生年月日'),
         SizedBox(width: 4),
-        Container(
+        SizedBox(
           width: 80,
           child: DropDownNumberSelect(
             value: selectYear,
@@ -411,7 +412,7 @@ class _ConnectRegister extends State<ConnectRegister> {
           ),
         ),
         TextLabel(label: '年 '),
-        Container(
+        SizedBox(
           width: 55,
           child: DropDownNumberSelect(
             value: selectMonth,
@@ -420,7 +421,7 @@ class _ConnectRegister extends State<ConnectRegister> {
           ),
         ),
         TextLabel(label: '月 '),
-        Container(
+        SizedBox(
           width: 55,
           child: DropDownNumberSelect(
             value: selectDay,
@@ -436,10 +437,11 @@ class _ConnectRegister extends State<ConnectRegister> {
   Widget _getButton() {
     return AccountButton(
       tapFunc: () {
-        if (widget.isProfile != null && widget.isProfile! == true)
+        if (widget.isProfile != null && widget.isProfile! == true) {
           updateUserInfo();
-        else
+        } else {
           saveUserInfo();
+        }
       },
       label: widget.isProfile == true ? '保存する' : '会員画面へ',
     );
@@ -457,14 +459,14 @@ class _ConnectRegister extends State<ConnectRegister> {
   // }
 
   void selectYearValue(val) {
-    FocusScope.of(context).requestFocus(new FocusNode());
+    FocusScope.of(context).requestFocus(FocusNode());
     selectYear = val.toString();
     days = Funcs().getMaxDays(selectYear, selectMonth);
     setState(() {});
   }
 
   void selectMonthValue(val) {
-    FocusScope.of(context).requestFocus(new FocusNode());
+    FocusScope.of(context).requestFocus(FocusNode());
     selectMonth = val.toString();
     days = Funcs().getMaxDays(selectYear, selectMonth);
     if (int.parse(selectDay)>days) selectDay = days.toString();
@@ -472,7 +474,7 @@ class _ConnectRegister extends State<ConnectRegister> {
   }
 
   void selectDayValue(val) {
-    FocusScope.of(context).requestFocus(new FocusNode());
+    FocusScope.of(context).requestFocus(FocusNode());
     selectDay = val.toString();
     setState(() {});
   }

@@ -84,7 +84,7 @@ class _ConnectMenuView extends State<ConnectMenuView> {
       padding: EdgeInsets.only(left: 30, right: 30),
       height: 200,
       child: menuImage == null
-          ? Image.asset('images/noimage.jpg', fit: BoxFit.contain)
+          ? Image.asset('images/no_image.jpg', fit: BoxFit.contain)
           : Image.network(
               menuImageUrl + menuImage!,
               fit: BoxFit.cover,

@@ -22,8 +22,8 @@ class StampModel {
       stampId: json['stamp_id'],
       userId: json['user_id'],
       organId: json['organ_id'],
-      staffId: json['staff_id'] == null ? '' : json['staff_id'],
-      useflag: json['use_flag'] == null ? '1' : json['use_flag'],
+      staffId: json['staff_id'] ?? '',
+      useflag: json['use_flag'] ?? '1',
       createDate: DateFormat('MM/dd').format(DateTime.parse(json['date'])),
     );
   }

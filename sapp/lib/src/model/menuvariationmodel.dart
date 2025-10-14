@@ -23,12 +23,8 @@ class MenuVariationModel {
         menuId: json['menu_id'],
         variationTitle: json['variation_title'],
         variationPrice: json['variation_price'],
-        variationbackStaff: json['variation_back_staff'] == null
-            ? null
-            : json['variation_back_staff'],
-        variationAmount: json['variation_back_amount'] == null
-            ? ''
-            : json['variation_back_amount'],
-        staffName: json['staff_name'] == null ? null : json['staff_name']);
+        variationbackStaff: json['variation_back_staff'],
+        variationAmount: json['variation_back_amount'] ?? '',
+        staffName: json['staff_name']);
   }
 }

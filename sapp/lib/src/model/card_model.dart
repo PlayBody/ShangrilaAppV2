@@ -24,12 +24,12 @@ class CardModel {
   factory CardModel.fromJson(Map<String, dynamic> json) {
     int month = int.parse(json['exp_month'].toString());
     int year = int.parse(json['exp_year'].toString()) - 2000;
-    String expDate = (month<10 ? '0' : '') + month.toString() +'/'+(year<10 ? '0' : '') + year.toString();
+    String expDate = '${month<10 ? '0' : ''}$month/${year<10 ? '0' : ''}$year';
     return CardModel(
       id: json['id'].toString(),
       userId: json['user_id'].toString(),
       brand: json['brand'].toString(),
-      cardNum: '**** **** **** **** ' + json['last_num'].toString(),
+      cardNum: '**** **** **** **** ${json['last_num']}',
       expDate: expDate,
       type: json['type'].toString(),
       postalCode: json['postal_code'].toString(),

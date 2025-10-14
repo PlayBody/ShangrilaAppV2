@@ -24,11 +24,11 @@ class CartDetailModel {
   factory CartDetailModel.fromJson(Map<String, dynamic> json) {
     CartDetailModel tmp = CartDetailModel(
       id: json['cart_detail_id'],
-      title: json['ticket_title'] == null ? '' : json['ticket_title'],
+      title: json['ticket_title'] ?? '',
       ticketId: json['ticket_id'],
       price: json['ticket_price'],
       image: json['ticket_image'],
-      detail: json['ticket_detail'] == null ? '' : json['ticket_detail'],
+      detail: json['ticket_detail'] ?? '',
       tax: json['ticket_tax'],
       cnt: json['ticket_count'],
     );

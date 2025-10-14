@@ -18,7 +18,7 @@ class OrderMenuModel {
 
   factory OrderMenuModel.fromJson(Map<String, dynamic> json) {
     return OrderMenuModel(
-      id: json['id'] == null ? null : json['id'].toString(),
+      id: json['id']?.toString(),
       menuTitle: json['menu_title'],
       quantity: json['quantity'],
       menuPrice: double.parse(json['menu_price']).toInt().toString(),

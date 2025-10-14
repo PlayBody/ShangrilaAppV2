@@ -31,7 +31,7 @@ class UserCouponModel {
       id: json['user_coupon_id'],
       couponId: json['coupon_id'],
       couponName: json['coupon_name'],
-      couponCode: json['coupon_code'] == null ? '' : json['coupon_code'],
+      couponCode: json['coupon_code'] ?? '',
       useDate: json['use_date'],
       condition: json['condition'],
       useOrgan: json['use_organ_id'],

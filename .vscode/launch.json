@@ -6,20 +6,20 @@
     "configurations": [
     
         {
-            "name": "shangrila_app",
+            "name": "sapp",
             "cwd": "sapp",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "shangrila_app (profile mode)",
+            "name": "sapp (profile mode)",
             "cwd": "sapp",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "shangrila_app (release mode)",
+            "name": "sapp (release mode)",
             "cwd": "sapp",
             "request": "launch",
             "type": "dart",

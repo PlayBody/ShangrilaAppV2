@@ -48,22 +48,20 @@ class UserModel {
   factory UserModel.fromJson(Map<String, dynamic> json) {
     return UserModel(
       userId: json['user_no'] == null ? '' : json['user_id'].toString(),
-      userNo: json['user_no'] == null ? '' : json['user_no'],
-      qrCode: json['user_qrcode'] == null ? '1' : json['user_qrcode'],
-      grade: json['user_grade'] == null ? '' : json['user_grade'],
+      userNo: json['user_no'] ?? '',
+      qrCode: json['user_qrcode'] ?? '1',
+      grade: json['user_grade'] ?? '',
       userFirstName:
-          json['user_first_name'] == null ? '' : json['user_first_name'],
+          json['user_first_name'] ?? '',
       userLastName:
-          json['user_last_name'] == null ? '' : json['user_last_name'],
-      userNick: json['user_nick'] == null ? '' : json['user_nick'],
-      userEmail: json['user_email'] == null ? '' : json['user_email'],
-      userTel: json['user_tel'] == null ? '' : json['user_tel'],
-      userBirth: json['user_birthday'] == null
-          ? DateFormat('yyyy-MM-dd').format(DateTime.now())
-          : json['user_birthday'],
-      userSex: json['user_sex'] == null ? '1' : json['user_sex'],
-      userTicket: json['user_ticket'] == null ? '' : json['user_ticket'],
-      password: json['user_password'] == null ? '' : json['user_password'],
+          json['user_last_name'] ?? '',
+      userNick: json['user_nick'] ?? '',
+      userEmail: json['user_email'] ?? '',
+      userTel: json['user_tel'] ?? '',
+      userBirth: json['user_birthday'] ?? DateFormat('yyyy-MM-dd').format(DateTime.now()),
+      userSex: json['user_sex'] ?? '1',
+      userTicket: json['user_ticket'] ?? '',
+      password: json['user_password'] ?? '',
       groupId: json['group_id'],
       deviceToken: json['user_device_token'],
       isPushMesseage: (json['is_message_push'] == null ||

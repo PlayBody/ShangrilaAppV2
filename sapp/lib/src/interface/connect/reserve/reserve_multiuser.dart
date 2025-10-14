@@ -10,7 +10,7 @@ import 'connect_reserve_menu.dart';
 
 class ReserveMultiUser extends StatefulWidget {
   final String organId;
-  const ReserveMultiUser({required this.organId, Key? key}) : super(key: key);
+  const ReserveMultiUser({required this.organId, super.key});
 
   @override
   _ReserveMultiUser createState() => _ReserveMultiUser();

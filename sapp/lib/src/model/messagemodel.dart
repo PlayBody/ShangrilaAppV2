@@ -28,11 +28,11 @@ class MessageModel {
         type: json['type'],
         createDate: json['create_date'],
         fileType: json['file_type'] == null ? '' : json['file_type'].toString(),
-        fileUrl: json['file_url'] == null ? '' : json['file_url'],
-        fileName: json['file_name'] == null ? '' : json['file_name'],
+        fileUrl: json['file_url'] ?? '',
+        fileName: json['file_name'] ?? '',
         videoUrl: json['video_url'],
-        organName: json['organ_name'] == null ? '' : json['organ_name'],
-        staffName: json['staff_name'] == null ? '' : json['staff_name'],
+        organName: json['organ_name'] ?? '',
+        staffName: json['staff_name'] ?? '',
         readflag: json['read_flag'] == null
             ? false
             : json['read_flag'] == '1'

@@ -11,7 +11,7 @@ import '../../../common/globals.dart' as globals;
 
 class ReserveStaff extends StatefulWidget {
   final String organId;
-  const ReserveStaff({required this.organId, Key? key}) : super(key: key);
+  const ReserveStaff({required this.organId, super.key});
 
   @override
   _ReserveStaff createState() => _ReserveStaff();
@@ -37,11 +37,12 @@ class _ReserveStaff extends State<ReserveStaff> {
   }
 
   Future<List> loadInitData() async {
-    if (selectSex == 3)
+    if (selectSex == 3) {
       staffs = await ClStaff().loadStaffs(context,
           {'organ_id': widget.organId, 'min_auth': '1', 'max_auth': '4'});
-    else
+    } else {
       staffs = [];
+    }
 
     // selectStaff = null;
     // if (staffs.length > 0) dropdownState.currentState!.didChange(null);
@@ -65,7 +66,7 @@ class _ReserveStaff extends State<ReserveStaff> {
         staffs.firstWhere((element) => element.staffId == staffId);
 
     staffName = selStaff.staffNick == ''
-        ? (selStaff.staffFirstName! + ' ' + selStaff.staffLastName!)
+        ? ('${selStaff.staffFirstName!} ${selStaff.staffLastName!}')
         : selStaff.staffNick;
     staffComment = selStaff.comment;
     isShowStaffComment = true;
@@ -171,6 +172,7 @@ class _ReserveStaff extends State<ReserveStaff> {
         value: selectStaff,
         items: [
           ...staffs.map((e) => DropdownMenuItem(
+                value: e.staffId,
                 child: Text(
                   e.staffNick == ''
                       ? (e.staffFirstName! + ' ' + e.staffLastName!)
@@ -179,7 +181,6 @@ class _ReserveStaff extends State<ReserveStaff> {
                       color:
                           e.staffSex == '1' ? Colors.blue : Colors.pinkAccent),
                 ),
-                value: e.staffId,
               ))
         ],
         tapFunc: (v) => onSelectStaff(v),

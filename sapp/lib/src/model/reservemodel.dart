@@ -42,7 +42,7 @@ class ReserveModel {
       for (var item in json['menus']) {
         sum = (int.parse(sum) +
                 int.parse(
-                    item['menu_price'] == null ? '0' : item['menu_price']))
+                    item['menu_price'] ?? '0'))
             .toString();
         menuList.add(MenuModel.fromJson(item));
       }
@@ -51,8 +51,8 @@ class ReserveModel {
     return ReserveModel(
       reserveId: json['reserve_id'],
       organId: json['organ_id'].toString(),
-      organName: json['organ_name'] == null ? '' : json['organ_name'],
-      staffName: json['staff_name'] == null ? '' : json['staff_name'],
+      organName: json['organ_name'] ?? '',
+      staffName: json['staff_name'] ?? '',
       userId: json['user_id'].toString(),
       reserveTime: json['reserve_time'],
       reserveExitTime: json['reserve_exit_time'],
@@ -64,7 +64,7 @@ class ReserveModel {
       couponAmount: json['coupon_use_amount'] == null
           ? '0'
           : json['coupon_use_amount'].toString(),
-      payMethod: json['pay_method'] == null ? '2' : json['pay_method'],
+      payMethod: json['pay_method'] ?? '2',
       menus: menuList,
       createTime: json['create_date'].toString(),
       updateUserName: json['update_user_name'] == null

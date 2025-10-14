@@ -24,9 +24,9 @@ class StaffListModel {
       staffFirstName: json['staff_first_name'],
       staffLastName: json['staff_last_name'],
       staffSex: json['staff_sex'] == null ? '1' : json['staff_sex'].toString(),
-      staffNick: json['staff_nick'] == null ? '' : json['staff_nick'],
-      staffLabel: json['sort_name'] == null ? '' : json['sort_name'],
-      comment: json['staff_comment'] == null ? '' : json['staff_comment'],
+      staffNick: json['staff_nick'] ?? '',
+      staffLabel: json['sort_name'] ?? '',
+      comment: json['staff_comment'] ?? '',
       auth: json['auth'],
     );
   }

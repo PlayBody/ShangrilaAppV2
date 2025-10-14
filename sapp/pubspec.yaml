@@ -112,12 +112,12 @@ flutter:
   uses-material-design: true
 
   assets:
-    - images/loginback.jpg
-    - images/noimage.jpg
     - images/logo.png
     - images/card_back.png
+    - images/login_back.jpg
     - images/card_back_gold.png
     - images/home_body_back.jpg
+    - images/no_image.jpg
     - images/cart_back.jpg
     - images/qr_logo.png
     - images/icon/icon_diamond.png

@@ -10,7 +10,7 @@ class GroupModel {
     return GroupModel(
       groupId: json['group_id'],
       groupName: json['group_name'],
-      userCnt: json['user_cnt'] == null ? '0' : json['user_cnt'],
+      userCnt: json['user_cnt'] ?? '0',
     );
   }
 }

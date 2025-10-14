@@ -73,7 +73,7 @@ class _PasswordReset extends State<PasswordReset> {
         child: Container(
           decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage('images/loginback.jpg'),
+                  image: AssetImage('images/login_back.jpg'),
                   fit: BoxFit.cover)),
           child: Scaffold(
             backgroundColor: Colors.transparent,

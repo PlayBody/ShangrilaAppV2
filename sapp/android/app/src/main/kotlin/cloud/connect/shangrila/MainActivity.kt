@@ -1,4 +1,4 @@
-package com.example.shangrila_app
+package cloud.connect.shangrila
 
 import io.flutter.embedding.android.FlutterActivity
 

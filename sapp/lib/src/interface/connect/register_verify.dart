@@ -117,7 +117,7 @@ class _RegisterVerify extends State<RegisterVerify> {
       ),
       decoration: BoxDecoration(
           image: DecorationImage(
-        image: AssetImage('images/loginback.jpg'),
+        image: AssetImage('images/login_back.jpg'),
         fit: BoxFit.cover,
       )),
     );

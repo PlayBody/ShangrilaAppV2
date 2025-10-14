@@ -28,19 +28,17 @@ class MenuModel {
   factory MenuModel.fromJson(Map<String, dynamic> json) {
     return MenuModel(
         menuId: json['menu_id'],
-        menuTitle: json['menu_title'] == null ? '' : json['menu_title'],
-        menuPrice: json['menu_price'] == null ? '' : json['menu_price'],
-        menuCost: json['menu_cost'] == null ? '' : json['menu_cost'],
-        menuTax: json['menu_tax'] == null ? '' : json['menu_tax'],
-        menuDetail: json['menu_detail'] == null ? '' : json['menu_detail'],
-        menuTime: json['menu_time'] == null ? '0' : json['menu_time'],
+        menuTitle: json['menu_title'] ?? '',
+        menuPrice: json['menu_price'] ?? '',
+        menuCost: json['menu_cost'] ?? '',
+        menuTax: json['menu_tax'] ?? '',
+        menuDetail: json['menu_detail'] ?? '',
+        menuTime: json['menu_time'] ?? '0',
         // multiNumber: json['multi_number'] == null
         //     ? '1'
         //     : json['multi_number'].toString(),
         menuInterval:
-            json['menu_interval'] == null ? '0' : json['menu_interval'],
-        variations: json['variation_titles'] == null
-            ? null
-            : json['variation_titles'].split(','));
+            json['menu_interval'] ?? '0',
+        variations: json['variation_titles']?.split(','));
   }
 }

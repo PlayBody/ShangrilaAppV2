@@ -9,7 +9,7 @@ import '../../../common/globals.dart' as globals;
 
 class ConnectSale extends StatefulWidget {
   final String url;
-  const ConnectSale({required this.url, Key? key}) : super(key: key);
+  const ConnectSale({required this.url, super.key});
 
   @override
   _ConnectSale createState() => _ConnectSale();

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class InputLabel extends StatelessWidget {
   final String label;
-  const InputLabel({required this.label, Key? key}) : super(key: key);
+  const InputLabel({required this.label, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class InputLabel extends StatelessWidget {
 
 class TextLabel extends StatelessWidget {
   final String label;
-  const TextLabel({required this.label, Key? key}) : super(key: key);
+  const TextLabel({required this.label, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class TextLabel extends StatelessWidget {
 
 class DlgHeaderText extends StatelessWidget {
   final String label;
-  const DlgHeaderText({required this.label, Key? key}) : super(key: key);
+  const DlgHeaderText({required this.label, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class DlgHeaderText extends StatelessWidget {
 
 class DlgSubHeaderText extends StatelessWidget {
   final String label;
-  const DlgSubHeaderText({required this.label, Key? key}) : super(key: key);
+  const DlgSubHeaderText({required this.label, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +50,7 @@ class DlgSubHeaderText extends StatelessWidget {
 
 class LeftSectionTitleText extends StatelessWidget {
   final String label;
-  const LeftSectionTitleText({required this.label, Key? key}) : super(key: key);
+  const LeftSectionTitleText({required this.label, super.key});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -64,7 +64,7 @@ class LeftSectionTitleText extends StatelessWidget {
 
 class CommentTitleText extends StatelessWidget {
   final String label;
-  const CommentTitleText({required this.label, Key? key}) : super(key: key);
+  const CommentTitleText({required this.label, super.key});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -75,7 +75,7 @@ class CommentTitleText extends StatelessWidget {
 
 class CommentText extends StatelessWidget {
   final String label;
-  const CommentText({required this.label, Key? key}) : super(key: key);
+  const CommentText({required this.label, super.key});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -87,7 +87,7 @@ class CommentText extends StatelessWidget {
 
 class CommentBigText extends StatelessWidget {
   final String label;
-  const CommentBigText({required this.label, Key? key}) : super(key: key);
+  const CommentBigText({required this.label, super.key});
   @override
   Widget build(BuildContext context) {
     return Container(

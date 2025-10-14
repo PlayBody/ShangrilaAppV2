@@ -43,7 +43,7 @@ class OrganModel {
         isNoReserve: json['is_no_reserve'] == null
             ? '0'
             : json['is_no_reserve'].toString(),
-        organAddress: json['address'] == null ? '' : json['address'],
+        organAddress: json['address'] ?? '',
         organPhone: json['phone'],
         organComment: json['comment'] ?? '',
         organImage: json['image'],

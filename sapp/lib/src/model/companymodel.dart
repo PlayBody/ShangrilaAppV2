@@ -30,21 +30,15 @@ class CompanyModel {
         companyId: json['company_id'],
         companyName: json['company_name'],
         companyDomain: json['company_domain'],
-        ecUrl: json['ec_site_url'] == null ? '' : json['ec_site_url'],
-        companyReceiptNumber: json['company_receipt_number'] == null
-            ? ''
-            : json['company_receipt_number'],
+        ecUrl: json['ec_site_url'] ?? '',
+        companyReceiptNumber: json['company_receipt_number'] ?? '',
         companyPrintOrder: json['print_order_number'] == null
             ? ''
             : json['print_order_number'].toString(),
-        licensText: json['license_text'] == null ? '' : json['license_text'],
-        squareApplicationId: json['square_application_id'] == null
-            ? 'not set'
-            : json['square_application_id'],
-        squareLocationId: json['square_location_id'] == null
-            ? 'not set'
-            : json['square_location_id'],
-        squareToken: json['square_token'] == null ? '' : json['square_token'],
+        licensText: json['license_text'] ?? '',
+        squareApplicationId: json['square_application_id'] ?? 'not set',
+        squareLocationId: json['square_location_id'] ?? 'not set',
+        squareToken: json['square_token'] ?? '',
         floorImage: json['floor_image']);
   }
 }

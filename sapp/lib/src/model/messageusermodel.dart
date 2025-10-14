@@ -14,16 +14,12 @@ class MessageUserModel {
     return MessageUserModel(
       content: json['content'],
       userId: json['user_id'],
-      userName: json['user_nick'] == null
-          ? (json['user_first_name'] == null
+      userName: json['user_nick'] ?? (json['user_first_name'] == null
               ? ''
               : json['user_first_name'] + '　' + json['user_last_name'] == null
                   ? ''
-                  : json['user_last_name'])
-          : json['user_nick'],
-      unreadCnt: json['unread_message_count'] == null
-          ? '0'
-          : json['unread_message_count'],
+                  : json['user_last_name']),
+      unreadCnt: json['unread_message_count'] ?? '0',
     );
   }
 }

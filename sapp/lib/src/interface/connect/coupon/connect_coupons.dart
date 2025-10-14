@@ -341,7 +341,7 @@ class _ConnectCoupons extends State<ConnectCoupons> {
                 color: const Color(0xffcecece),
                 image: DecorationImage(
                         image: coupon.iconUrl == null
-                            ? NetworkImage(apiBase + "/assets/images/coupons/noimages.jpg")
+                            ? NetworkImage(apiBase + "/assets/images/coupons/no_images.jpg")
                             : NetworkImage(apiBase + "/assets/images/coupons/" + coupon.iconUrl!),
                         fit: BoxFit.cover,
                       ),

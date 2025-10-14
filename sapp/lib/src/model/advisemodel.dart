@@ -22,18 +22,18 @@ class AdviseModel {
       this.videoController});
 
   factory AdviseModel.fromJson(Map<String, dynamic> json) {
-    var userNameLabel = json['user_nick'] == null ? '' : json['user_nick'];
+    var userNameLabel = json['user_nick'] ?? '';
     if (userNameLabel == '') {
       userNameLabel =
-          (json['user_first_name'] == null ? '' : json['user_first_name']) +
+          (json['user_first_name'] ?? '') +
               ' ' +
-              (json['user_last_name'] == null ? '' : json['user_last_name']);
+              (json['user_last_name'] ?? '');
     }
 
     var teacherLabel =
-        (json['staff_first_name'] == null ? '' : json['staff_first_name']) +
+        (json['staff_first_name'] ?? '') +
             ' ' +
-            (json['staff_last_name'] == null ? '' : json['staff_last_name']);
+            (json['staff_last_name'] ?? '');
 
     return AdviseModel(
         adviseId: json['advise_id'],

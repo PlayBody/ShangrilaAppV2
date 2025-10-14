@@ -1,6 +1,6 @@
 {
-    "name": "shangrila_app",
-    "short_name": "shangrila_app",
+    "name": "sapp",
+    "short_name": "sapp",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

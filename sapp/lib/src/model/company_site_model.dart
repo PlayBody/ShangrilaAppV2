@@ -17,8 +17,8 @@ class CompanySiteModel {
     return CompanySiteModel(
       siteId: json['id'],
       companyId: json['company_id'],
-      title: json['site_title'] == null ? '' : json['site_title'],
-      url: json['site_url'] == null ? '' : json['site_url'],
+      title: json['site_title'] ?? '',
+      url: json['site_url'] ?? '',
       visible: json['visible'] == null ? '0' : json['visible'].toString(),
     );
   }
