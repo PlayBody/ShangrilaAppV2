@@ -116,9 +116,19 @@ class _AppInit extends State<AppInit> {
 
     String? deviceToken;
     
+    // Request notification permissions (required for iOS)
+    await FirebaseMessaging.instance.requestPermission(
+      alert: true,
+      announcement: false,
+      badge: true,
+      carPlay: false,
+      criticalAlert: false,
+      provisional: false,
+      sound: true,
+    );
+    
     if (Platform.isIOS) {
-      await FirebaseMessaging.instance.getAPNSToken();
-      
+      // Wait for APNS token to be available
       int retries = 0;
       while (retries < 10) {
         String? apnsToken = await FirebaseMessaging.instance.getAPNSToken();
