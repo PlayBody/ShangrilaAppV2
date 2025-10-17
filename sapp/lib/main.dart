@@ -115,6 +115,21 @@ class _AppInit extends State<AppInit> {
     }
 
     String? deviceToken;
+    
+    if (Platform.isIOS) {
+      await FirebaseMessaging.instance.getAPNSToken();
+      
+      int retries = 0;
+      while (retries < 10) {
+        String? apnsToken = await FirebaseMessaging.instance.getAPNSToken();
+        if (apnsToken != null) {
+          break;
+        }
+        await Future.delayed(Duration(milliseconds: 500));
+        retries++;
+      }
+    }
+    
     deviceToken = await FirebaseMessaging.instance
         .getToken()
         .then((token) => deviceToken = token);
