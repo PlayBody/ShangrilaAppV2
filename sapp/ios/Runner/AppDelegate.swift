@@ -18,6 +18,9 @@ import flutter_downloader
       UNUserNotificationCenter.current().delegate = self
     }
     
+    // Request APNS token from Apple
+    application.registerForRemoteNotifications()
+    
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
   
