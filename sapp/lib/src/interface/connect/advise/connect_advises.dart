@@ -12,7 +12,7 @@ import 'connect_advise_add.dart';
 import 'package:http/http.dart' as http;
 
 class ConnetAdvises extends StatefulWidget {
-  const ConnetAdvises({Key? key}) : super(key: key);
+  const ConnetAdvises({super.key});
 
   @override
   _ConnetAdvises createState() => _ConnetAdvises();

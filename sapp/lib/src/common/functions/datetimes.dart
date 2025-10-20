@@ -2,29 +2,20 @@ import 'package:intl/intl.dart';
 
 class DateTimes {
   String convertTimeFromDouble(v) {
-    return (v.toInt() < 10
-            ? '0' + v.toInt().toString()
-            : v.toInt().toString()) +
-        ':' +
-        (((v - v.toInt()) * 60).toInt() < 10
-            ? '0' + ((v - v.toInt()) * 60).toInt().toString()
-            : ((v - v.toInt()) * 60).toInt().toString()) +
-        ':00';
+    return '${v.toInt() < 10 ? '0${v.toInt()}' : v.toInt().toString()}:${((v - v.toInt()) * 60).toInt() < 10 ? '0${((v - v.toInt()) * 60).toInt()}' : ((v - v.toInt()) * 60).toInt().toString()}:00';
   }
 
   String convertTimeFromDateTime(v) {
-    return (v.hour < 10 ? '0' + v.hour.toString() : v.hour.toString()) +
+    return (v.hour < 10 ? '0${v.hour}' : v.hour.toString()) +
         ":" +
-        (v.minute < 10 ? '0' + v.minute.toString() : v.toString()) +
+        (v.minute < 10 ? '0${v.minute}' : v.toString()) +
         ':00';
   }
 
   String convertTimeFromDateTimeAddHour(v, h) {
-    return ((v.hour + h) < 10
-            ? '0' + (v.hour + h).toString()
-            : (v.hour + h).toString()) +
+    return ((v.hour + h) < 10 ? '0${v.hour + h}' : (v.hour + h).toString()) +
         ":" +
-        (v.minute < 10 ? '0' + v.minute.toString() : v.minute.toString()) +
+        (v.minute < 10 ? '0${v.minute}' : v.minute.toString()) +
         ':00';
   }
 
@@ -33,11 +24,10 @@ class DateTimes {
   }
 
   String convertJPYMFromDateTime(DateTime v) {
-    return v.year.toString() + '年' + v.month.toString() + '月';
+    return '${v.year}年${v.month}月';
   }
 
-  String dateFormatMonthAndDay(String date){
+  String dateFormatMonthAndDay(String date) {
     return DateFormat('MM/dd').format(DateTime.parse(date));
-
   }
 }

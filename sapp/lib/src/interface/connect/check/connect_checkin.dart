@@ -208,19 +208,19 @@ class _ConnectCheckIn extends State<ConnectCheckIn> {
                       Container(
                         alignment: Alignment.centerRight,
                         width: 120,
-                        child: Text(Funcs().currencyFormat(e.menuPrice) + '円'),
+                        child: Text('${Funcs().currencyFormat(e.menuPrice)}円'),
                       ),
                     ],
                   )))),
         if (organ!.isNoReserve == constCheckinTypeOnlyReserve &&
-            reserves.length < 1)
+            reserves.isEmpty)
           Text(
             '予約データがありません。入店できません。',
             style: TextStyle(color: Colors.red),
           ),
         SizedBox(height: 12),
         Header4Text(
-            label: '必要なチケット数 : ' + organ!.checkTicketConsumtion.toString()),
+            label: '必要なチケット数 : ${organ!.checkTicketConsumtion}'),
         SizedBox(height: 48),
         Header4Text(label: 'チケット消費設定'),
         SizedBox(height: 8),

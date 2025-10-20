@@ -1,8 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';
-// import 'package:flutter/gestures.dart';
+import 'package:flutter/gestures.dart';
 import 'package:shangrila/src/interface/component/form/main_form.dart';
+import 'package:shangrila/src/interface/connect/layout/header_stamp.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import '../../../common/globals.dart' as globals;
@@ -35,6 +36,7 @@ class _ConnectSale extends State<ConnectSale> {
     globals.connectHeaerTitle = '通販';
     return MainForm(
         title: '通販',
+        header: MyConnetStampBar(),
         render: FutureBuilder<List>(
           future: loadData,
           builder: (context, snapshot) {
@@ -43,6 +45,9 @@ class _ConnectSale extends State<ConnectSale> {
                   // padding: EdgeInsets.only(left: 10, right: 10),
                   child: WebViewWidget(
                 controller: _controller,
+                gestureRecognizers: <Factory<OneSequenceGestureRecognizer>>{
+                  Factory<EagerGestureRecognizer>(() => EagerGestureRecognizer()),
+                },
               ));
             } else if (snapshot.hasError) {
               return Text("${snapshot.error}");
