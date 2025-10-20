@@ -103,7 +103,9 @@ class _ConnectCheck extends State<ConnectCheck> {
           //   await Dialogs().waitDialog(context, '予約内容は存在しません。');
           //   Navigator.pop(context);
           // } else {
+          result = scanData;
           Navigator.pop(context, organ['organ_id']);
+          return;
           // }
         }
 
@@ -115,9 +117,8 @@ class _ConnectCheck extends State<ConnectCheck> {
       } else {
         await Dialogs().waitDialog(context, err);
         Navigator.pop(context);
+        return;
       }
-      controller.resumeCamera();
-      result = scanData;
     });
   }
 
